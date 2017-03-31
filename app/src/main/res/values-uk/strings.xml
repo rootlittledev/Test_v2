@@ -28,4 +28,19 @@
     <string name="russian">Російська</string>
     <string name="english">Англійська</string>
     <string name="ukrainian">Українська</string>
+    <string name="changed_to_english">Змінено на англійську</string>
+    <string name="changed_to_russian">Змінено на російську</string>
+    <string name="changed_to_ukrainian">Змінено на українську</string>
+    <string name="no_internet">Немає звязку з інтернетом!</string>
+    <string name="choose_correct">Виберіть правильну відповідь!</string>
+    <string name="failed">Невдача!</string>
+    <string name="inserted">Дані вставлені</string>
+    <string name="logged">Вхід здійснено</string>
+    <string name="named_test">Тест названо</string>
+    <string name="no_tests">Течт не знайдено!</string>
+    <string name="not_inserted">Дані не вставлено!</string>
+    <string name="not_ready">Ще не зробив(</string>
+    <string name="registered">Зареєстровано</string>
+    <string name="your_result">Ваш результат!</string>
+    <string name="cant_be_empty">Пуста відповідь не може бути правильною!</string>
 </resources>

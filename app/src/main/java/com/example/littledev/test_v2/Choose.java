@@ -41,8 +41,7 @@ public class Choose extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         listView.setAdapter(adapter);
         if (adapter.isEmpty()){
-            String message = "No tests found";
-            Toast showEmpty = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+            Toast showEmpty = Toast.makeText(this, R.string.no_tests, Toast.LENGTH_SHORT);
             showEmpty.show();
         }
 

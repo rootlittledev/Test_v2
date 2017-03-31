@@ -35,7 +35,7 @@ public class Create extends AppCompatActivity {
     public void addData(View view){
         if(true_1.isChecked()) {
             if (answer_1.getText().toString().equals("")) {
-                Toast.makeText(this, "An empty answer can`t be the correct", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
             else
@@ -43,33 +43,33 @@ public class Create extends AppCompatActivity {
         }
         else if (true_2.isChecked())
             if (answer_2.getText().toString().equals("")) {
-                Toast.makeText(this, "An empty answer can`t be the correct", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
             else
                 correct = answer_1.getText().toString();
         else if (true_3.isChecked())
             if (answer_3.getText().toString().equals("")) {
-                Toast.makeText(this, "An empty answer can`t be the correct", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
             else
                 correct = answer_1.getText().toString();
         else if (true_4.isChecked())
             if (answer_4.getText().toString().equals("")) {
-                Toast.makeText(this, "An empty answer can`t be the correct", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
             else
                 correct = answer_1.getText().toString();
         else if (true_5.isChecked()) {
             if (answer_5.getText().toString().equals("")) {
-                Toast.makeText(this, "An empty answer can`t be the correct", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
         }
         else {
-            Toast.makeText(this, "Choose correct answer", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.choose_correct, Toast.LENGTH_LONG).show();
             return;
         }
         DBM dataBaseManager = new DBM(this);
@@ -81,11 +81,11 @@ public class Create extends AppCompatActivity {
                 answer_5.getText().toString(),
                 correct);
         if(isInserted) {
-            Toast.makeText(this, "Data Inserted", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.inserted, Toast.LENGTH_LONG).show();
             Reset();
         }
         else {
-            Toast.makeText(this, "Data not Inserted", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.not_inserted, Toast.LENGTH_LONG).show();
         }
     }
     public void onFinish(View view){

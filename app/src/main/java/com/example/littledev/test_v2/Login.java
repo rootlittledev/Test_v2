@@ -51,6 +51,8 @@ public class Login extends AppCompatActivity {
                 getBaseContext().getResources().updateConfiguration(config,
                         getBaseContext().getResources().getDisplayMetrics());
                 startActivity(refresh);
+                Toast.makeText(this, R.string.changed_to_english, Toast.LENGTH_SHORT)
+                        .show();
                 break;
             case R.id.russian:
                 languageToLoad = "ru"; // your language
@@ -61,6 +63,8 @@ public class Login extends AppCompatActivity {
                 getBaseContext().getResources().updateConfiguration(config,
                         getBaseContext().getResources().getDisplayMetrics());
                 startActivity(refresh);
+                Toast.makeText(this, R.string.changed_to_russian, Toast.LENGTH_SHORT)
+                        .show();
                 break;
             case R.id.ukrainian:
                 languageToLoad = "uk"; // your language
@@ -71,9 +75,11 @@ public class Login extends AppCompatActivity {
                 getBaseContext().getResources().updateConfiguration(config,
                         getBaseContext().getResources().getDisplayMetrics());
                 startActivity(refresh);
+                Toast.makeText(this, R.string.changed_to_ukrainian, Toast.LENGTH_SHORT)
+                        .show();
                 break;
             case R.id.action_settings:
-                Toast.makeText(this, "Settings selected", Toast.LENGTH_SHORT)
+                Toast.makeText(this, R.string.settings, Toast.LENGTH_SHORT)
                         .show();
                 break;
             default:
@@ -99,11 +105,11 @@ public class Login extends AppCompatActivity {
             bridge.execute("login",login,pass);
         }
         else
-            Toast.makeText(this, "No internet connection!", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, R.string.no_internet, Toast.LENGTH_LONG).show();
 
     }
 
     public void onRegister(View view) {
-        //startActivity(new Intent(this, Register.class));
+        startActivity(new Intent(this, Register.class));
     }
 }

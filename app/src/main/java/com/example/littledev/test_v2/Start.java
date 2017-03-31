@@ -90,7 +90,6 @@ public class Start extends AppCompatActivity {
 
     }
     public int getScore(){
-        Log.i("test",Integer.toString(score));
         score = Math.round(score * 100 / amount);
         return score;
     }

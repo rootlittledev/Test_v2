@@ -118,16 +118,16 @@ class Sql_bridge extends AsyncTask<String,Void,String> {
     protected void onPostExecute(String result) {
         switch (result) {
             case "Registered":
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, R.string.registered, Toast.LENGTH_LONG).show();
                 break;
             case "Login":
-                Toast.makeText(ctx, result, Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, R.string.logged, Toast.LENGTH_LONG).show();
                 if (ctx instanceof Login) {
                     ((Login) ctx).onLoginSuccess();
                 }
                 break;
             default:
-                Toast.makeText(ctx, "Failed", Toast.LENGTH_LONG).show();
+                Toast.makeText(ctx, R.string.failed, Toast.LENGTH_LONG).show();
                 break;
         }
 

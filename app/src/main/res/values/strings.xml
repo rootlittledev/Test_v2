@@ -28,4 +28,19 @@
     <string name="english">English</string>
     <string name="russian">Russian</string>
     <string name="ukrainian">Ukrainian</string>
+    <string name="changed_to_ukrainian">Changed to ukrainian</string>
+    <string name="changed_to_russian">Changed to russian</string>
+    <string name="changed_to_english">Changed to english</string>
+    <string name="no_internet">No internet connection!</string>
+    <string name="no_tests">Tests not found!</string>
+    <string name="not_inserted">Data not inserted!</string>
+    <string name="inserted">Data inserted</string>
+    <string name="cant_be_empty">An empty answer can`t be the correct!</string>
+    <string name="choose_correct">Choose correct answer!</string>
+    <string name="not_ready">Haven`t done yet(</string>
+    <string name="named_test">Test named</string>
+    <string name="your_result">Your result!</string>
+    <string name="failed">Failed!</string>
+    <string name="registered">Registered</string>
+    <string name="logged">Logged</string>
 </resources>

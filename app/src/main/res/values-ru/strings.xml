@@ -29,4 +29,19 @@
     <string name="russian">Русский</string>
     <string name="english">Английский</string>
     <string name="ukrainian">Украинский</string>
+    <string name="changed_to_english">Сменено на английский</string>
+    <string name="changed_to_russian">Сменено на русский</string>
+    <string name="changed_to_ukrainian">Сменено на украинский</string>
+    <string name="no_internet">Нет соединения с интернетом!</string>
+    <string name="choose_correct">Выберите правильный ответ!</string>
+    <string name="failed">Неудача!</string>
+    <string name="inserted">Даные вставлены</string>
+    <string name="logged">Вход осуществлен</string>
+    <string name="named_test">Тест назван</string>
+    <string name="no_tests">Тест не найден!</string>
+    <string name="not_inserted">Даные не втавлены!</string>
+    <string name="not_ready">Еще не зделал(</string>
+    <string name="registered">Зареєстровано</string>
+    <string name="your_result">Ваш результат!</string>
+    <string name="cant_be_empty">Пустой ответ не может быть правильным!</string>
 </resources>
