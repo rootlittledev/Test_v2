@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/registration_email"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="@dimen/small_text_size"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"/>
+
+    <EditText
+        android:id="@+id/registration_password"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/registration_email"
+        android:textAlignment="center"
+        android:textSize="@dimen/small_text_size"
+        android:inputType="textPassword"
+        android:hint="@string/password"/>
+    <CheckBox
+        android:id="@+id/registration_show_pass"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/registration_password"
+        android:textAlignment="center"
+        android:textSize="@dimen/small_text_size"
+        android:text="@string/registration_show_password"
+        android:onClick="showPassword"
+        />
+    <EditText
+        android:id="@+id/registration_name"
+
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/registration_show_pass"
+        android:textAlignment="center"
+        android:textSize="@dimen/small_text_size"
+        android:hint="@string/name"/>
+    <EditText
+        android:id="@+id/registration_surname"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/registration_name"
+        android:textAlignment="center"
+        android:textSize="@dimen/small_text_size"
+        android:hint="@string/surname"/>
+    <Button
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/registration_surname"
+        android:textAlignment="center"
+        android:textSize="@dimen/small_text_size"
+        android:text="@string/confirm"
+        android:onClick="onRegisterUser"/>
+
+</RelativeLayout>

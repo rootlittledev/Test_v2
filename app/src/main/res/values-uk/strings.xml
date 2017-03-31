@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="answer_1">Відповідь 1</string>
+    <string name="answer_2">Відповідь 2</string>
+    <string name="answer_3">Відповідь 3</string>
+    <string name="answer_4">Відповідь 4</string>
+    <string name="answer_5">Відповідь 5</string>
+    <string name="choose">Вибрати</string>
+    <string name="confirm">Підтвердити</string>
+    <string name="create">Створити</string>
+    <string name="download">Загрузити</string>
+    <string name="email">Емейл</string>
+    <string name="end">Кінець</string>
+    <string name="finish">Закінчити</string>
+    <string name="insert">Вставити</string>
+    <string name="login">Увійти</string>
+    <string name="login_label">Логін</string>
+    <string name="name">Імя</string>
+    <string name="next">Наступний</string>
+    <string name="password">Пароль</string>
+    <string name="question">Питання</string>
+    <string name="register">Зарегіструватись</string>
+    <string name="registration_show_password">Показати пароль</string>
+    <string name="start">Почати</string>
+    <string name="surname">Прізвище</string>
+    <string name="username">Користувач</string>
+    <string name="settings">Налаштування</string>
+    <string name="russian">Російська</string>
+    <string name="english">Англійська</string>
+    <string name="ukrainian">Українська</string>
+</resources>

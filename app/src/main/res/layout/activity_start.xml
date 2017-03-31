@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/scrollview"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:isScrollContainer="true">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/question_set"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/large_height_size"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:id="@+id/question_count"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:textSize="40sp"
+        android:layout_below="@id/question_set"
+        android:layout_centerHorizontal="true"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_below="@id/question_count"
+        android:layout_centerHorizontal="true"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/answered_1"
+        android:layout_width="@dimen/large_weight_size"
+        android:minHeight="@dimen/middle_height_size"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/progress_bar"
+        android:onClick="answer"/>
+    <Button
+        android:id="@+id/answered_2"
+        android:layout_width="@dimen/large_weight_size"
+        android:minHeight="@dimen/middle_height_size"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/answered_1"
+        android:onClick="answer"/>
+    <Button
+        android:id="@+id/answered_3"
+        android:layout_width="@dimen/large_weight_size"
+        android:minHeight="@dimen/middle_height_size"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/answered_2"
+        android:onClick="answer"/>
+    <Button
+        android:id="@+id/answered_4"
+        android:layout_width="@dimen/large_weight_size"
+        android:minHeight="@dimen/middle_height_size"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/answered_3"
+        android:onClick="answer"/>
+    <Button
+        android:id="@+id/answered_5"
+        android:layout_width="@dimen/large_weight_size"
+        android:minHeight="@dimen/middle_height_size"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/answered_4"
+        android:onClick="answer"/>
+
+
+
+</RelativeLayout>
+    </ScrollView>

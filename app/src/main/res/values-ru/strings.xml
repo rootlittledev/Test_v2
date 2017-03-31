@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    rces>
+    <string name="answer_1">Ответ 1</string>
+    <string name="answer_2">Ответ 2</string>
+    <string name="answer_3">Ответ 3</string>
+    <string name="answer_4">Ответ 4</string>
+    <string name="answer_5">Ответ 5</string>
+    <string name="choose">Вибрать</string>
+    <string name="confirm">Підтвердить</string>
+    <string name="create">Создать</string>
+    <string name="download">Загрузить</string>
+    <string name="email">Емейл</string>
+    <string name="end">Конец</string>
+    <string name="finish">Закончить</string>
+    <string name="insert">Вставить</string>
+    <string name="login">Вход</string>
+    <string name="login_label">Логин</string>
+    <string name="name">Имя</string>
+    <string name="next">Следующий</string>
+    <string name="password">Пароль</string>
+    <string name="question">Вопрос</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="registration_show_password">Показать пароль</string>
+    <string name="start">Начать</string>
+    <string name="surname">Прозвище</string>
+    <string name="username">Пользователь</string>
+    <string name="settings">Настройки</string>
+    <string name="russian">Русский</string>
+    <string name="english">Английский</string>
+    <string name="ukrainian">Украинский</string>
+</resources>

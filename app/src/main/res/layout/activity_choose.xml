@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/tests_list"
+        android:layout_width="@dimen/middle_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="@dimen/middle_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:text="@string/choose"
+        android:textSize="@dimen/middle_text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/tests_list"/>
+    <Button
+        android:layout_width="@dimen/small_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_below="@id/tests_list"
+        android:layout_centerHorizontal="true"
+        android:text="@string/confirm"
+        android:textSize="@dimen/small_text_size"
+        android:onClick="onChoose"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/table_name"
+        android:layout_width="@dimen/large_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:inputType="text"
+        android:textSize="@dimen/small_text_size"
+        android:hint="@string/name"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/name_test"
+        android:layout_width="@dimen/middle_weight_size"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/small_text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/table_name"
+        android:text="@string/confirm"
+        android:onClick="nameTest"/>
+
+</RelativeLayout>
