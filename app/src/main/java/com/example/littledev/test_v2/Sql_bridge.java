@@ -15,9 +15,11 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Random;
 
 class Sql_bridge extends AsyncTask<String,Void,String> {
     private Context ctx;
+    public static int acc_id;
 
     Sql_bridge(Context ctx) {
         this.ctx = ctx;
@@ -32,13 +34,14 @@ class Sql_bridge extends AsyncTask<String,Void,String> {
 
     @Override
     protected String doInBackground(String... params) {
+        Random random = new Random();
+        acc_id = random.nextInt(999999 - 11111) + 11111;
         String reg_url = "http://e-shops.hol.es/app_register";
         String log_url = "http://e-shops.hol.es/app_login";
         String method = params[0];
         if (method.equals("register")) {
             String name = params[1];
             String surname = params[2];
-            String email = params[3];
             String password = params[4];
             try {
                 URL url = new URL(reg_url);
@@ -51,7 +54,7 @@ class Sql_bridge extends AsyncTask<String,Void,String> {
                 String data = URLEncoder.encode("name", "UTF-8") + "=" + URLEncoder.encode(name, "UTF-8") + "&" +
                         URLEncoder.encode("surname", "UTF-8") + "=" + URLEncoder.encode(surname, "UTF-8") + "&" +
                         URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8") + "&" +
-                        URLEncoder.encode("email", "UTF-8") + "=" + URLEncoder.encode(email, "UTF-8");
+                        URLEncoder.encode("acc_id", "UTF-8") + "=" + URLEncoder.encode(Integer.toString(acc_id), "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -119,6 +122,9 @@ class Sql_bridge extends AsyncTask<String,Void,String> {
         switch (result) {
             case "Registered":
                 Toast.makeText(ctx, R.string.registered, Toast.LENGTH_LONG).show();
+                if (ctx instanceof Register) {
+                    ((Register) ctx).onRegisterSuccess();
+                }
                 break;
             case "Login":
                 Toast.makeText(ctx, R.string.logged, Toast.LENGTH_LONG).show();

@@ -1,11 +1,13 @@
 package com.example.littledev.test_v2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class Register extends AppCompatActivity {
@@ -27,10 +29,6 @@ public class Register extends AppCompatActivity {
         String password = passwordF.getText().toString();
         Sql_bridge registration = new Sql_bridge(this);
         registration.execute("register",name, surname, email, password);
-        nameF.setText("");
-        surnameF.setText("");
-        emailF.setText("");
-        passwordF.setText("");
     }
 
     public void showPassword(View view){
@@ -46,5 +44,10 @@ public class Register extends AppCompatActivity {
             passwordField.setSelection(passwordField.getText().length());
         }
 
+    }
+
+    public void onRegisterSuccess() {
+        startActivity(new Intent(Register.this, Login.class));
+        finish();
     }
 }

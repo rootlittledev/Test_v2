@@ -59,5 +59,25 @@
             android:textColor="@color/colorPrimary"
             android:onClick="onRegister"
             />
+        <TextView
+            android:id="@+id/registered_id_label"
+            android:layout_width="@dimen/middle_weight_size"
+            android:layout_marginTop="@dimen/middle_height_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="@string/id_number"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:id="@+id/registered_id"
+            android:layout_width="@dimen/middle_weight_size"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/registered_id_label"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:visibility="invisible"
+            />
     </RelativeLayout>
     </RelativeLayout>

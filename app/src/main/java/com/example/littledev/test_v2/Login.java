@@ -13,6 +13,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -26,6 +27,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        showId();
 
     }
 
@@ -90,9 +92,20 @@ public class Login extends AppCompatActivity {
     }
 
     public void onLoginSuccess() {
-
         startActivity(new Intent(Login.this, Main.class));
         finish();
+    }
+
+    public void showId(){
+        Sql_bridge bridge = new Sql_bridge(this);
+        if(Sql_bridge.acc_id != 0) {
+            TextView id_acc = (TextView) findViewById(R.id.registered_id);
+            TextView id_label = (TextView) findViewById(R.id.registered_id_label);
+            id_acc.setVisibility(View.VISIBLE);
+            id_label.setVisibility(View.VISIBLE);
+            id_acc.setText(Integer.toString(bridge.acc_id));
+            Sql_bridge.acc_id = 0;
+        }
     }
 
     public void onLogin(View view) throws IOException, InterruptedException {
