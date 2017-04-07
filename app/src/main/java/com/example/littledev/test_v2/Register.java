@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
 
 
 public class Register extends AppCompatActivity {
@@ -18,7 +21,9 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
     }
 
-    public void onRegisterUser(View view){
+    public void onRegisterUser(View view) throws IOException, InterruptedException{
+        Sql_bridge registration = new Sql_bridge(this);
+
         EditText nameF = (EditText) findViewById(R.id.registration_name);
         EditText surnameF = (EditText) findViewById(R.id.registration_surname);
         EditText emailF = (EditText) findViewById(R.id.registration_email);
@@ -27,8 +32,12 @@ public class Register extends AppCompatActivity {
         String surname = surnameF.getText().toString();
         String email = emailF.getText().toString();
         String password = passwordF.getText().toString();
-        Sql_bridge registration = new Sql_bridge(this);
-        registration.execute("register",name, surname, email, password);
+        if (registration.isConnected()){
+            registration.execute("register",name, surname, email, password);
+        }
+        else
+            Toast.makeText(this, R.string.no_internet, Toast.LENGTH_LONG).show();
+
     }
 
     public void showPassword(View view){

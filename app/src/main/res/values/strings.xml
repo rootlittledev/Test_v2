@@ -44,4 +44,7 @@
     <string name="registered">Registered</string>
     <string name="logged">Logged</string>
     <string name="id_number">Your ID</string>
+    <string name="first_or_second_not_filled">First or second may be empty!</string>
+    <string name="third_empty">Third field is empty!</string>
+    <string name="fourth_empty">Forth field is empty!</string>
 </resources>

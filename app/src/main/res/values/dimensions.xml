@@ -4,8 +4,8 @@
     <dimen name="middle_height_size">60dp</dimen>
     <dimen name="large_weight_size">300dp</dimen>
     <dimen name="large_height_size">140dp</dimen>
-    <dimen name="small_weight_size">160dp</dimen>
-    <dimen name="small_height_size">400dp</dimen>
+    <dimen name="small_weight_size">60dp</dimen>
+    <dimen name="small_height_size">60dp</dimen>
     <dimen name="radio_group_height_size">300dp</dimen>
     <dimen name="radio_group_weight_size">40dp</dimen>
     <dimen name="large_text_size">60sp</dimen>

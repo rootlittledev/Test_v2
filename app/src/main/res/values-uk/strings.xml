@@ -19,7 +19,7 @@
     <string name="next">Наступний</string>
     <string name="password">Пароль</string>
     <string name="question">Питання</string>
-    <string name="register">Зарегіструватись</string>
+    <string name="register">Зареєструватись</string>
     <string name="registration_show_password">Показати пароль</string>
     <string name="start">Почати</string>
     <string name="surname">Прізвище</string>
@@ -44,4 +44,7 @@
     <string name="your_result">Ваш результат!</string>
     <string name="cant_be_empty">Пуста відповідь не може бути правильною!</string>
     <string name="id_number">Ваш ID</string>
+    <string name="first_or_second_not_filled">Перший, другий або запитання не заповнені!</string>
+    <string name="fourth_empty">Четверте поле не заповнене!</string>
+    <string name="third_empty">Третє поле не заповнено!</string>
 </resources>

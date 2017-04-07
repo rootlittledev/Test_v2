@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:layout_above="@id/tests_list"/>
     <Button
-        android:layout_width="@dimen/small_weight_size"
+        android:layout_width="@dimen/middle_weight_size"
         android:layout_height="@dimen/middle_height_size"
         android:layout_below="@id/tests_list"
         android:layout_centerHorizontal="true"

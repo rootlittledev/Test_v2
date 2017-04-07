@@ -46,6 +46,7 @@
                 android:minHeight="@dimen/middle_height_size"
                 android:layout_below="@id/answer_2"
                 android:inputType="text"
+                android:visibility="gone"
                 android:hint="@string/answer_3" />
             <EditText
                 android:id="@+id/answer_4"
@@ -54,6 +55,7 @@
                 android:minHeight="@dimen/middle_height_size"
                 android:layout_below="@id/answer_3"
                 android:inputType="text"
+                android:visibility="gone"
                 android:hint="@string/answer_4" />
             <EditText
                 android:id="@+id/answer_5"
@@ -62,43 +64,110 @@
                 android:minHeight="@dimen/middle_height_size"
                 android:layout_below="@id/answer_4"
                 android:inputType="text"
+                android:visibility="gone"
                 android:hint="@string/answer_5" />
+            <Button
+                android:id="@+id/add_3"
+                android:layout_width="@dimen/small_weight_size"
+                android:layout_height="@dimen/small_weight_size"
+                android:layout_below="@id/answer_2"
+                android:layout_centerHorizontal="true"
+                style="@style/add_button"
+                android:tag="add_3"
+                android:onClick="addField"/>
+            <Button
+                android:id="@+id/add_4"
+                android:layout_width="@dimen/small_weight_size"
+                android:layout_height="@dimen/small_weight_size"
+                android:layout_below="@id/answer_3"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                style="@style/add_button"
+                android:tag="add_4"
+                android:onClick="addField"/>
+            <Button
+                android:id="@+id/add_5"
+                android:layout_width="@dimen/small_weight_size"
+                android:layout_height="@dimen/small_weight_size"
+                android:layout_below="@id/answer_4"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                style="@style/add_button"
+                android:tag="add_5"
+                android:onClick="addField"/>
+            <Button
+                android:id="@+id/minus_3"
+                android:layout_width="@dimen/small_weight_size"
+                android:layout_height="@dimen/small_weight_size"
+                android:layout_below="@id/answer_3"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:layout_toEndOf="@id/add_4"
+                android:layout_toRightOf="@id/add_4"
+                style="@style/minus_button"
+                android:tag="minus_3"
+                android:onClick="addField"/>
+            <Button
+                android:id="@+id/minus_4"
+                android:layout_width="@dimen/small_weight_size"
+                android:layout_height="@dimen/small_weight_size"
+                android:layout_below="@id/answer_4"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/add_5"
+                android:layout_toRightOf="@id/add_5"
+                android:visibility="gone"
+                style="@style/minus_button"
+                android:tag="minus_4"
+                android:onClick="addField"/>
+            <Button
+                android:id="@+id/minus_5"
+                android:layout_width="@dimen/small_weight_size"
+                android:layout_height="@dimen/small_weight_size"
+                android:layout_below="@id/answer_5"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                style="@style/minus_button"
+                android:tag="minus_5"
+                android:onClick="addField"/>
 
         </RelativeLayout>
         <RadioGroup
-            android:layout_width="@dimen/radio_group_weight_size"
-            android:layout_height="@dimen/radio_group_height_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_toEndOf="@id/text_layout"
             android:layout_toRightOf="@id/text_layout">
 
             <RadioButton
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/middle_height_size"
                 android:id="@+id/answer_t1"
                 android:layout_weight="1" />
 
             <RadioButton
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/middle_height_size"
                 android:id="@+id/answer_t2"
                 android:layout_weight="1" />
 
             <RadioButton
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/middle_height_size"
                 android:id="@+id/answer_t3"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:visibility="gone"/>
 
             <RadioButton
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/middle_height_size"
                 android:id="@+id/answer_t4"
+                android:visibility="gone"
                 android:layout_weight="1" />
 
             <RadioButton
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/middle_height_size"
                 android:id="@+id/answer_t5"
+                android:visibility="gone"
                 android:layout_weight="1" />
         </RadioGroup>
     </RelativeLayout>

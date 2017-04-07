@@ -45,4 +45,7 @@
     <string name="your_result">Ваш результат!</string>
     <string name="cant_be_empty">Пустой ответ не может быть правильным!</string>
     <string name="id_number">Ваш ID</string>
+    <string name="first_or_second_not_filled">Первый, второй или вопрос не заполнены!</string>
+    <string name="fourth_empty">Четвертое поле не заполнено!</string>
+    <string name="third_empty">Третье поле не заполнено!</string>
 </resources>
