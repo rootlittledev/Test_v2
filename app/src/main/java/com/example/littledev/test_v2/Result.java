@@ -19,6 +19,8 @@ public class Result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
         local = Choose.located;
+        Sql_bridge bridge = new Sql_bridge(this);
+        bridge.execute("result",Login.login);
         if(local.equals("local")){
             test_local = new Start_local();
             int result = test_local.getScore();

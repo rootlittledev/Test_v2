@@ -21,12 +21,17 @@ import java.util.Locale;
 
 public class Login extends AppCompatActivity {
 
+    public static String login;
+    public static String pass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
+        login = "";
+        pass = "";
         showId();
 
     }
@@ -111,8 +116,8 @@ public class Login extends AppCompatActivity {
     public void onLogin(View view) throws IOException, InterruptedException {
         EditText eLogin = (EditText) findViewById(R.id.username);
         EditText ePass = (EditText) findViewById(R.id.password);
-        String login = eLogin.getText().toString();
-        String pass = ePass.getText().toString();
+        login = eLogin.getText().toString();
+        pass = ePass.getText().toString();
         Sql_bridge bridge = new Sql_bridge(this);
         if(bridge.isConnected()){
             bridge.execute("login",login,pass);
