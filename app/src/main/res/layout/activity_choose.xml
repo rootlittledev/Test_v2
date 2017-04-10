@@ -4,24 +4,65 @@
 
     <Spinner
         android:id="@+id/tests_list"
-        android:layout_width="@dimen/middle_weight_size"
+        android:layout_width="230dp"
         android:layout_height="@dimen/middle_height_size"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
     <TextView
-        android:layout_width="@dimen/middle_weight_size"
+        android:id="@+id/tests_list_label"
+        android:layout_width="230dp"
         android:layout_height="@dimen/middle_height_size"
-        android:text="@string/choose"
+        android:text="@string/online"
         android:textSize="@dimen/middle_text_size"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/tests_list"/>
+    <Spinner
+        android:id="@+id/tests_list_local"
+        android:layout_width="230dp"
+        android:layout_height="@dimen/middle_height_size"
+        android:layout_above="@id/tests_list_label"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/tests_list_label_local"
+        android:layout_width="230dp"
+        android:layout_height="@dimen/middle_height_size"
+        android:text="@string/local"
+        android:textSize="@dimen/middle_text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/tests_list_local"/>
     <Button
-        android:layout_width="@dimen/middle_weight_size"
+        android:layout_width="230dp"
         android:layout_height="@dimen/middle_height_size"
         android:layout_below="@id/tests_list"
         android:layout_centerHorizontal="true"
         android:text="@string/confirm"
         android:textSize="@dimen/small_text_size"
         android:onClick="onChoose"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/tests_list_label"
+        android:layout_toLeftOf="@id/tests_list_label"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:tag="local"
+            android:onClick="onLocated"
+            android:layout_weight="1"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:tag="online"
+            android:onClick="onLocated"
+            android:layout_weight="1"
+            />
+    </RadioGroup>
 
 </RelativeLayout>

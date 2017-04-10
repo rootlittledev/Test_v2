@@ -23,7 +23,6 @@ public class Register extends AppCompatActivity {
 
     public void onRegisterUser(View view) throws IOException, InterruptedException{
         Sql_bridge registration = new Sql_bridge(this);
-
         EditText nameF = (EditText) findViewById(R.id.registration_name);
         EditText surnameF = (EditText) findViewById(R.id.registration_surname);
         EditText emailF = (EditText) findViewById(R.id.registration_email);

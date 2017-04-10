@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class Result extends AppCompatActivity {
 
     Start test;
+    Start_local test_local;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -51,6 +51,11 @@
 
         </activity>
         <activity
+            android:name=".Start_local"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
             android:name=".Result"
             android:screenOrientation="portrait">
 

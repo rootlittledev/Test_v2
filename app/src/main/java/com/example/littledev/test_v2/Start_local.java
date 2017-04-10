@@ -10,35 +10,30 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.List;
 
-
-public class Start extends AppCompatActivity {
+public class Start_local extends AppCompatActivity {
     TextView question;
     Button answer_1;
     Button answer_2;
     Button answer_3;
     Button answer_4;
     Button answer_5;
+    Cursor res;
+    static int amount;
     static int score;
-    int index;
-    static int size;
-    public static String test_name;
+    int question_number;
     ProgressBar bar;
     TextView text;
-    String correct;
-    static HashMap<String, List<String>> test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
-        Sql_bridge bridge = new Sql_bridge(this);
-        bridge.execute("test", test_name);
-        index = 0;
-        score = 0;
-
+        setContentView(R.layout.activity_start_local);
+        DBM myDb = new DBM(this);
+        res = myDb.getAllData();
+        res.moveToFirst();
+        amount = res.getCount();
+        question_number = 1;
         question = (TextView) findViewById(R.id.question_set);
         answer_1 = (Button) findViewById(R.id.answered_1);
         answer_2 = (Button) findViewById(R.id.answered_2);
@@ -47,7 +42,8 @@ public class Start extends AppCompatActivity {
         answer_5 = (Button) findViewById(R.id.answered_5);
         bar = (ProgressBar) findViewById(R.id.progress_bar);
         text = (TextView) findViewById(R.id.question_count);
-
+        text.setText(Integer.toString(res.getPosition()+1) + " of " + res.getCount());
+        questionManager();
 
     }
     void reset(){
@@ -62,47 +58,39 @@ public class Start extends AppCompatActivity {
         answer_4.setVisibility(View.VISIBLE);
         answer_5.setVisibility(View.VISIBLE);
     }
-
-    public static void setTest(HashMap<String, List<String>> map){
-        test = map;
-    }
-    public void questionManager(){
-        size = test.get("question").size();
-        text.setText(Integer.toString(index+1) + " of " + size);
-        question.setText(test.get("question").get(index));
-        if(!test.get("answer_1").get(index).equals("")){
-            answer_1.setText(test.get("answer_1").get(index));
+    void questionManager(){
+        question.setText(res.getString(1));
+        if(!res.getString(2).equals("")){
+            answer_1.setText(res.getString(2));
         }else{
             answer_1.setEnabled(false);
             answer_1.setVisibility(View.GONE);
         }
-        if(!test.get("answer_2").get(index).equals("")){
-            answer_2.setText(test.get("answer_2").get(index));
+        if(!res.getString(3).equals("")){
+            answer_2.setText(res.getString(3));
         }else{
             answer_2.setEnabled(false);
             answer_2.setVisibility(View.GONE);}
-        if(!test.get("answer_3").get(index).equals("")){
-            answer_3.setText(test.get("answer_3").get(index));
+        if(!res.getString(4).equals("")){
+            answer_3.setText(res.getString(4));
         }else{
             answer_3.setEnabled(false);
             answer_3.setVisibility(View.GONE);}
-        if(!test.get("answer_4").get(index).equals("")){
-            answer_4.setText(test.get("answer_4").get(index));
+        if(!res.getString(5).equals("")){
+            answer_4.setText(res.getString(5));
         }else{
             answer_4.setEnabled(false);
             answer_4.setVisibility(View.GONE);}
-        if(!test.get("answer_5").get(index).equals("")){
-            answer_5.setText(test.get("answer_5").get(index));
+        if(!res.getString(6).equals("")){
+            answer_5.setText(res.getString(6));
         }else {
             answer_5.setEnabled(false);
             answer_5.setVisibility(View.GONE);
         }
-        correct = test.get("correct").get(index);
-        index++;
 
     }
     public int getScore(){
-        score = Math.round(score * 100 / size);
+        score = Math.round(score * 100 / amount);
         return score;
     }
     public void resetScore(){
@@ -110,19 +98,21 @@ public class Start extends AppCompatActivity {
     }
 
     public void answer(View view){
+        if(((Button) view).getText().toString().equals(res.getString(7))){
 
-        if(view.getTag().equals(correct)){
             score++;
-            bar.setProgress(Math.round(score * 100 / size));
+            bar.setProgress(Math.round(score * 100 / res.getCount()));
 
         }
-        if (index < test.get("question").size()) {
-            reset();
-            questionManager();
+        if (question_number < res.getCount()) {
+            res.moveToNext();
+            question_number++;
+            text.setText(Integer.toString(res.getPosition()+1) + " of " + res.getCount());
         }
-
         else{
             startActivity(new Intent(this, Result.class));
         }
+        reset();
+        questionManager();
     }
 }
