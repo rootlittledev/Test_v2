@@ -57,26 +57,28 @@ public class Create extends AppCompatActivity {
                 return;
             }
             else
-                correct = answer_1.getText().toString();
+                correct = answer_2.getText().toString();
         else if (true_3.isChecked())
             if (answer_3.getText().toString().equals("")) {
                 Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
             else
-                correct = answer_1.getText().toString();
+                correct = answer_3.getText().toString();
         else if (true_4.isChecked())
             if (answer_4.getText().toString().equals("")) {
                 Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
             else
-                correct = answer_1.getText().toString();
+                correct = answer_4.getText().toString();
         else if (true_5.isChecked()) {
             if (answer_5.getText().toString().equals("")) {
                 Toast.makeText(this, R.string.cant_be_empty, Toast.LENGTH_LONG).show();
                 return;
             }
+            else
+                correct = answer_5.getText().toString();
         }
         else {
             Toast.makeText(this, R.string.choose_correct, Toast.LENGTH_LONG).show();
@@ -95,6 +97,7 @@ public class Create extends AppCompatActivity {
                 answer_4.getText().toString(),
                 answer_5.getText().toString(),
                 correct);
+        Log.i("test", correct);
         if(isInserted) {
             Toast.makeText(this, R.string.inserted, Toast.LENGTH_LONG).show();
             Reset();

@@ -12,20 +12,35 @@ public class Result extends AppCompatActivity {
 
     Start test;
     Start_local test_local;
+    String local;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        local = Choose.located;
+        if(local.equals("local")){
+            test_local = new Start_local();
+            int result = test_local.getScore();
+            String res =  result + "%";
+            TextView coefficient = (TextView) findViewById(R.id.end_score);
+            coefficient.setText(res);
+        }
+        else {
+            test = new Start();
+            int result = test.getScore();
+            String res =  result + "%";
+            TextView coefficient = (TextView) findViewById(R.id.end_score);
+            coefficient.setText(res);
+        }
         Toast showEmpty = Toast.makeText(this, R.string.your_result, Toast.LENGTH_SHORT);
         showEmpty.show();
-        test = new Start();
-        int result = test.getScore();
-        TextView coefficient = (TextView) findViewById(R.id.end_score);
-        coefficient.setText(Integer.toString(result) + "%");
     }
 
     public void endTest(View view){
+        if (local.equals("local"))
+            test_local.resetScore();
+        else
         test.resetScore();
         startActivity(new Intent(this, Main.class));
     }

@@ -48,4 +48,10 @@
     <string name="first_or_second_not_filled">Первый, второй или вопрос не заполнены!</string>
     <string name="fourth_empty">Четвертое поле не заполнено!</string>
     <string name="third_empty">Третье поле не заполнено!</string>
+    <string name="local">Локальные</string>
+    <string name="no_tests_local">Нет локальных тестов!</string>
+    <string name="no_tests_online">Нет онлайн тестов!</string>
+    <string name="online">Онлайн</string>
+    <string name="choose_location">Выберите расположение теста</string>
+    <string name="choose_test">Выберите тест!</string>
 </resources>

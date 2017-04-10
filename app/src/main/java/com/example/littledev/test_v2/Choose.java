@@ -33,6 +33,7 @@ public class Choose extends AppCompatActivity {
         dataBaseManager = new DBM(this);
         listViewL = (Spinner) findViewById(R.id.tests_list_local);
         listView = (Spinner) findViewById(R.id.tests_list);
+        located = "";
         Sql_bridge bridge = new Sql_bridge(this);
         bridge.execute("subject");
         getTestsL();
@@ -82,7 +83,7 @@ public class Choose extends AppCompatActivity {
             listView.setEnabled(false);
             listViewL.setEnabled(true);
         }
-        else
+        else if(view.getTag().toString().equals("online"))
             located = "online";
             listViewL.setEnabled(false);
             listView.setEnabled(true);
@@ -93,15 +94,24 @@ public class Choose extends AppCompatActivity {
     public void onChoose(View view){
         if (located.equals("local")) {
             Spinner spinner = (Spinner) findViewById(R.id.tests_list_local);
-            String item = spinner.getSelectedItem().toString();
-            dataBaseManager.setTest(item);
-            startActivity(new Intent(this, Start_local.class));
+            if (!spinner.getSelectedItem().toString().equals("")) {
+                String item = spinner.getSelectedItem().toString();
+                dataBaseManager.setTest(item);
+                startActivity(new Intent(this, Start_local.class));
+            }
+            else
+                Toast.makeText(this, R.string.choose_test, Toast.LENGTH_LONG).show();
         }
-        else {
+        else if (located.equals("online")) {
             Spinner spinner = (Spinner) findViewById(R.id.tests_list);
-            Start.test_name = spinner.getSelectedItem().toString();
-            startActivity(new Intent(this, Start.class));
+            if (!spinner.getSelectedItem().toString().equals("")){
+                Start.test_name = spinner.getSelectedItem().toString();
+                startActivity(new Intent(this, Start.class));
+            }else
+                Toast.makeText(this, R.string.choose_test, Toast.LENGTH_LONG).show();
         }
+        else
+            Toast.makeText(this, R.string.choose_location, Toast.LENGTH_LONG).show();
 
     }
 }

@@ -47,4 +47,10 @@
     <string name="first_or_second_not_filled">First or second may be empty!</string>
     <string name="fourth_empty">Forth field is empty!</string>
     <string name="third_empty">Third field is empty!</string>
+    <string name="local">Local</string>
+    <string name="no_tests_local">No local test!</string>
+    <string name="no_tests_online">No online tests!</string>
+    <string name="online">Online</string>
+    <string name="choose_location">Choose location</string>
+    <string name="choose_test">Choose test!</string>
 </resources>

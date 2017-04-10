@@ -47,4 +47,10 @@
     <string name="first_or_second_not_filled">Перший, другий або запитання не заповнені!</string>
     <string name="fourth_empty">Четверте поле не заповнене!</string>
     <string name="third_empty">Третє поле не заповнено!</string>
+    <string name="local">Локальні</string>
+    <string name="no_tests_local">Нема локальних тестів</string>
+    <string name="no_tests_online">Нема онлайн тестів!</string>
+    <string name="online">Онлайн</string>
+    <string name="choose_location">Виберіть розміщення теста</string>
+    <string name="choose_test">Виберіть тест!</string>
 </resources>

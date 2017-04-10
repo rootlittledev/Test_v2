@@ -98,6 +98,7 @@ public class Start_local extends AppCompatActivity {
     }
 
     public void answer(View view){
+        Log.i("test", res.getString(7));
         if(((Button) view).getText().toString().equals(res.getString(7))){
 
             score++;
